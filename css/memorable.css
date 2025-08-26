@@ -1,0 +1,126 @@
+/* Font 1 */
+@font-face {
+  font-family: 'londrinasolid';
+  src: url('../font/londrina/LondrinaSolid-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font 2 */
+@font-face {
+  font-family: 'grostesque';
+  src: url('../font/grostesque/Body-Grotesque-Bold-trial.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Font 3 */
+@font-face {
+  font-family: 'opensans';
+  src: url('../font/opensans/OpenSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Reset / Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0a0a40; /* dark blue background */
+  color: white;
+  background-image: url("../image/BACKGROUND.jpg");
+}
+
+/* Buttons */
+.top-buttons {
+  position: absolute;
+  top: 20px;  /* layo mula sa taas */
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between; /* isa sa left, isa sa right */
+}
+.btn {
+  border-radius: 20px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  background-color: rgb(8, 8, 58);
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+  min-width: 180px; /* dagdag size ng box */
+}
+.btn:hover {
+  background-color: white;
+  color: rgb(8, 8, 58);
+}
+
+.about-box {
+  position: relative; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(8, 8, 58);
+  border-radius: 50px;
+  padding: 100px;
+  max-width: 1000px;
+  margin: 100px auto;
+  box-shadow: 0 20 20px rgba(0,0,0,0.3);
+  max-width: 90%;
+  width: 50%;
+}
+
+.about-texts {
+  flex: 2;              /* mas malaki sa gitna */
+  text-align: center;   /* center align text */
+  margin: 0 20px;       /* konting agwat sa images */
+}
+
+.about-title {
+  font-family: 'londrinasolid', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 20px;
+  margin: 0;
+  text-align-last: center;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'londrinasolid', sans-serif;
+}
+
+.about-image {
+  max-width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.about-image1 {
+  max-width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.container {
+  display: flex;
+  justify-content: space-between;  /* left, center, right */
+  align-items: center;
+}
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-texts {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .about-image {
+    max-width: 200px;
+  }
+}
