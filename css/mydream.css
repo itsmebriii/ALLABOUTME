@@ -1,4 +1,3 @@
-/* Font 1 */
 @font-face {
   font-family: 'londrinasolid';
   src: url('../font/londrina/LondrinaSolid-Black.ttf') format('truetype');
@@ -6,7 +5,6 @@
   font-style: normal;
 }
 
-/* Font 2 */
 @font-face {
   font-family: 'grostesque';
   src: url('../font/grostesque/Body-Grotesque-Bold-trial.ttf') format('truetype');
@@ -14,32 +12,31 @@
   font-style: normal;
 }
 
-/* Font 3 */
 @font-face {
   font-family: 'opensans';
   src: url('../font/opensans/OpenSans-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-/* Reset / Base */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #0a0a40; /* dark blue background */
+  font-family: 'londrinasolid', sans-serif;
+  background-color: #0a0a40;
   color: white;
   background-image: url("../image/BACKGROUND.jpg");
 }
 
-/* Buttons */
 .top-buttons {
   position: absolute;
-  top: 20px;  /* layo mula sa taas */
+  top: 20px;
   left: 20px;
   right: 20px;
   display: flex;
-  justify-content: space-between; /* isa sa left, isa sa right */
+  justify-content: space-between;
 }
+
 .btn {
   border-radius: 20px;
   padding: 15px 20px;
@@ -50,15 +47,16 @@ body {
   text-align: center;
   text-decoration: none;
   transition: 0.3s ease;
-  min-width: 180px; /* dagdag size ng box */
+  min-width: 180px;
 }
+
 .btn:hover {
   background-color: white;
   color: rgb(8, 8, 58);
 }
 
 .about-box {
-  position: relative; 
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -74,9 +72,9 @@ body {
 }
 
 .about-texts {
-  flex: 2;              /* mas malaki sa gitna */
-  text-align: center;   /* center align text */
-  margin: 0 20px;       /* konting agwat sa images */
+  flex: 2;
+  text-align: center;
+  margin: 0 20px;
 }
 
 .about-title {
@@ -100,27 +98,71 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 .about-image1 {
   max-width: 250px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 .container {
   display: flex;
-  justify-content: space-between;  /* left, center, right */
+  justify-content: space-between;
   align-items: center;
 }
-/* Responsive (mobile) */
+
+@media (max-width: 1024px) {
+  .about-box {
+    width: 80%;
+    padding: 60px;
+  }
+  .about-title {
+    font-size: 3.5rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-box {
     flex-direction: column;
     text-align: center;
+    width: 95%;
+    padding: 30px;
   }
+
   .about-texts {
-    margin-right: 0;
+    margin: 20px 0;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .about-image,
+  .about-image1 {
+    max-width: 150px;
     margin-bottom: 20px;
   }
-  .about-image {
-    max-width: 200px;
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-text {
+    font-size: 0.9rem;
   }
 }

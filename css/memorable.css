@@ -1,4 +1,3 @@
-/* Font 1 */
 @font-face {
   font-family: 'londrinasolid';
   src: url('../font/londrina/LondrinaSolid-Black.ttf') format('truetype');
@@ -6,7 +5,6 @@
   font-style: normal;
 }
 
-/* Font 2 */
 @font-face {
   font-family: 'grostesque';
   src: url('../font/grostesque/Body-Grotesque-Bold-trial.ttf') format('truetype');
@@ -14,33 +12,36 @@
   font-style: normal;
 }
 
-/* Font 3 */
 @font-face {
   font-family: 'opensans';
   src: url('../font/opensans/OpenSans-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-/* Reset / Base */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #0a0a40; /* dark blue background */
+  font-family: 'londrinasolid', sans-serif;
+  background-color: #0a0a40;
   color: white;
   background-image: url("../image/BACKGROUND.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Buttons */
 .top-buttons {
   position: absolute;
-  top: 20px;  /* layo mula sa taas */
+  top: 20px;
   left: 20px;
   right: 20px;
   display: flex;
-  justify-content: space-between; /* isa sa left, isa sa right */
+  justify-content: space-between; 
 }
+
 .btn {
+  font-family: "opensans" sans-serif;
   border-radius: 20px;
   padding: 15px 20px;
   font-size: 1.2rem;
@@ -50,7 +51,7 @@ body {
   text-align: center;
   text-decoration: none;
   transition: 0.3s ease;
-  min-width: 180px; /* dagdag size ng box */
+  min-width: 180px;
 }
 .btn:hover {
   background-color: white;
@@ -73,54 +74,82 @@ body {
   width: 50%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+}
+
 .about-texts {
-  flex: 2;              /* mas malaki sa gitna */
-  text-align: center;   /* center align text */
-  margin: 0 20px;       /* konting agwat sa images */
+  text-align: center;
+  margin: 0 20px 40px 20px;
 }
 
 .about-title {
   font-family: 'londrinasolid', sans-serif;
   font-size: 5rem;
-  margin-bottom: 20px;
-  margin: 0;
-  text-align-last: center;
+  margin-left: 20px;
+  color: white;
+  text-align: center;
 }
 
-.about-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  text-align: center;
-  font-family: 'londrinasolid', sans-serif;
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .about-image {
-  max-width: 250px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-.about-image1 {
-  max-width: 250px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+@media (max-width: 1024px) {
+  .about-box {
+    width: 80%;
+    padding: 60px;
+  }
+  .about-title {
+    font-size: 3.5rem;
+  }
 }
-.container {
-  display: flex;
-  justify-content: space-between;  /* left, center, right */
-  align-items: center;
-}
-/* Responsive (mobile) */
+
 @media (max-width: 768px) {
   .about-box {
     flex-direction: column;
     text-align: center;
+    width: 95%;
+    padding: 30px;
   }
+
   .about-texts {
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
   .about-image {
-    max-width: 200px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2rem;
   }
 }
